@@ -1,4 +1,4 @@
-# Fine-tuning Stable Diffusion Text-to-Image
+# Fine-tune Stable Diffusion Text-to-Image
 ## Prepare
 **Install requirements**
 ```sh

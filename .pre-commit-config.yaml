@@ -1,7 +1,7 @@
 # Pre-commit hooks
 
 default_language_version:
-  python: python3.10
+  python: python3.8
 
 # Define bot property if installed via https://github.com/marketplace/pre-commit-ci
 ci:
