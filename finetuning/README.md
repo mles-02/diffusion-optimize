@@ -21,7 +21,7 @@ notebook_login()
 ```
 
 ## Pipeline Fine-tuning
-We fine-tune [Stable Diffusion 2.1](https://huggingface.co/stabilityai/stable-diffusion-2-1-base) using the [Pokemon dataset](https://huggingface.co/datasets/lambdalabs/pokemon-blip-captions) with [Huggingface Diffusers](https://github.com/huggingface/diffusers). You can see more example in [diffusers fine-tuning](https://github.com/huggingface/diffusers/tree/main/examples/text_to_image) or [LambdaLabsML diffusion fine-tuning](https://github.com/LambdaLabsML/examples/tree/main/stable-diffusion-finetuning)
+We fine-tune [Stable Diffusion 2.1](https://huggingface.co/stabilityai/stable-diffusion-2-1-base) using the [Pokemon dataset](https://huggingface.co/datasets/lambdalabs/pokemon-blip-captions) with [🤗 diffusers](https://github.com/huggingface/diffusers). You can see more example in [diffusers fine-tuning](https://github.com/huggingface/diffusers/tree/main/examples/text_to_image) or [LambdaLabsML diffusion fine-tuning](https://github.com/LambdaLabsML/examples/tree/main/stable-diffusion-finetuning)
 
 We found that it is possible to fine-tune the pipeline on a Nvidia T4 GPU (Google Colab) / Nvidia P100 GPU (Kaggle). You can see [our model](https://huggingface.co/Zero-nnkn/stable-diffusion-2-pokemon) trained 5000 steps with batch size 1 (~ 5 hours P100).
 

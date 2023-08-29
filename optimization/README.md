@@ -1,6 +1,23 @@
 # Optimize Stable Diffusion Text-to-Image
 Investigate optimization method for both inference speed and memory-consumption of StableDiffusion with [🤗 diffusers](https://github.com/huggingface/optimum). You can see more details [here](https://huggingface.co/docs/diffusers/optimization/opt_overview).
 
+## Overview
+**Speed Benchmark**: We provided [notebook](./benchmark.ipynb) for benchmark
+- CPU Benchmark 
+    - Device: Intel(R) Xeon(R) CPU @ 2.00GHz (Google Colab)
+    - Inference steps: 20 steps
+
+    | Pipeline | DType | Speed (s/image) |
+    | :- | :-: | :-: |
+    | Pytorch | fp32 | 665.6 |
+    | Pytorch + TokenMerging | fp32 | 542.2 |
+    | ONNX | fp32 | 566.4 |
+    | ONNX | uint8 | 455.8 |
+    | OpenVINO | fp32 | 548.2 |
+
+**Note**: 
+- Right now we're just focusing on speed. The quality benchmarks of optimization model will be considered in the future.
+
 ## Pytorch Pipeline
 ### Half precision weights (Float16)
 Load and run model directly in float16 (Only for GPU).
