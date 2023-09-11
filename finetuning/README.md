@@ -50,6 +50,12 @@ accelerate launch --mixed_precision="fp16" train_text_to_image.py \
 We also finetune our stable diffusion by using Low Rank Adaptation (LoRA) with Sophia optimizer to boost up the training time as well as to reduce the GPU memory usage for our model.
 
 ```
+cd diffusers/examples/text_to_image/
+export MODEL_NAME="runwayml/stable-diffusion-v1-5"
+export OUTPUT_DIR="/sddata/finetune/lora/pokemon"
+export HUB_MODEL_ID="sophia-pokemon-lora"
+export DATASET_NAME="lambdalabs/pokemon-blip-captions"
+
 accelerate launch --mixed_precision="fp16" train_text_to_image_lora.py
                   --pretrained_model_name_or_path=$MODEL_NAME \
                   --dataset_name=$DATASET_NAME  \
