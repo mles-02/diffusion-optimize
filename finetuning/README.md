@@ -11,7 +11,7 @@ pip install bitsandbytes
 
 **Optional: Initialize Accelerate**
 ```sh
-accelerate config # Setuo your config
+accelerate config # Setup your config
 ```
 
 **Optinal: Login Huggingface** (if you want to push your model to hub)
