@@ -538,7 +538,9 @@ def main():
 
         optimizer_cls = bnb.optim.AdamW8bit
     else:
-        optimizer_cls = torch.optim.AdamW
+        # optimizer_cls = torch.optim.AdamW
+        from sophia import SophiaG
+        optimizer_cls = SophiaG
 
     optimizer = optimizer_cls(
         lora_layers.parameters(),
