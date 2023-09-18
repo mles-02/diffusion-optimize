@@ -7,6 +7,7 @@ pip install datasets
 pip install transformers
 pip install xformers
 pip install bitsandbytes
+pip install Sophia-Optimizer
 ```
 
 **Optional: Initialize Accelerate**
